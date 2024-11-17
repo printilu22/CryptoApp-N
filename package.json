@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "react-scripts": "^5.0.1"
-  },
-  "dependencies": {
-    "html-react-parser": "^5.1.18"
-  }
-}
