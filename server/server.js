@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-import fetch from 'node-fetch'; // Now using import instead of require
+import fetch from 'node-fetch'; // Using import instead of require
 import dotenv from 'dotenv'; // Import dotenv to load environment variables
 
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Use the port provided by Render
 
 // Use CORS middleware
 app.use(cors());
@@ -33,5 +33,5 @@ app.get('/api/everything', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 });
